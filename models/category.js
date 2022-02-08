@@ -25,4 +25,4 @@ Category.init(
     }
 )
 
-module.exports = category;
+module.exports = Category;
