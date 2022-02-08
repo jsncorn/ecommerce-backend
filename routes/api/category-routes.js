@@ -21,7 +21,25 @@ router.get('/', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-
+    Category.findOne({
+        where: {
+            id: req.params.id
+        },
+        include: {
+            model: Product,
+            attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
+        }
+    })
+    .then(categoryData => {
+        if(!categoryData) {
+            res.status(404);
+        }
+        res.json(categoryData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500);
+    })
 })
 
 router.post('/', (req, res) => {
