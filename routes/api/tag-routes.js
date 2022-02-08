@@ -68,7 +68,7 @@ router.delete('/:id', (req, res) => {
     }
   })
   .then(tagData => {
-    if (!dbTagData) {
+    if (!tagData) {
       res.status(404);
     }
     res.json(tagData);
