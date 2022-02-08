@@ -8,16 +8,16 @@ router.get('/', (req, res) => {
             attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
         }
     })
-    .then(categoryData => {
-        if(!categoryData) {
-            res.status(404);
-        }
-        res.json(categoryData);
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500);
-    })
+        .then(categoryData => {
+            if (!categoryData) {
+                res.status(404);
+            }
+            res.json(categoryData);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500);
+        })
 })
 
 router.get('/:id', (req, res) => {
@@ -30,40 +30,40 @@ router.get('/:id', (req, res) => {
             attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
         }
     })
-    .then(categoryData => {
-        if(!categoryData) {
-            res.status(404);
-        }
-        res.json(categoryData);
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500);
-    })
+        .then(categoryData => {
+            if (!categoryData) {
+                res.status(404);
+            }
+            res.json(categoryData);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500);
+        })
 })
 
 router.post('/', (req, res) => {
     Category.create({
-        category_name: req.body.category_name;
+        category_name: req.body.category_name
     })
-    .then(categoryData => {
-        if(!categoryData) {
-            res.status(404);
-        }
-        res.json(categoryData);
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500);
-    })
+        .then(categoryData => {
+            if (!categoryData) {
+                res.status(404);
+            }
+            res.json(categoryData);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500);
+        })
 })
 
 router.put('/:id', (req, res) => {
-    
+
 })
 
 router.delete('/:id', (req, res) => {
-    
+
 })
 
 module.exports = router;
