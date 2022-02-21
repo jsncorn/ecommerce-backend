@@ -1,7 +1,9 @@
 # eCommerce Backend
-A mySQL database and that is used as a backend for an eCommerce site. 
+A backend database that is used for an eCommerce site. Using Sequelize, it create relationships between items, categories, and item tags. The user can modify, delete, and create categories. It is a fully command-line driven application with no viewable front end. The video below demonstrates how to use the application using Insomnia.
 
-![Demo Video](https://github.com/jsncorn/ecommerce-backend/blob/main/video/demo.mkv)
+
+https://user-images.githubusercontent.com/77278027/155034538-e0973112-8d9b-4395-9ce8-7eb4af8ee532.mp4
+
 
 ## Built With
 
